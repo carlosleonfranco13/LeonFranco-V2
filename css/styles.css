@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Reey', sans-serif;
+    src: url(/assets/fonts/Reey-Regular.otf);
+}
+
+:root{
+    /*--FONT-FAMILY--*/
+    --font-logo: 'Reey', sans-serif;
+    --fontRoboto-1: 'Roboto', sans-serif;
+
+    /*--COLORS--*/
+    --color-1: #030A15;
+    --color-2: #6633CC;
+    --color-3: #fff;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--fontRoboto-1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background: transparent;
+}
+
+.header .logo{
+    font-family: var(--font-logo);
+    font-size: 3.2rem;
+    color: var(--color-2);
+    margin-right: auto;
+}
+.navbar a{
+    position: relative;
+    font-family: var(--fontRoboto-1);
+    font-size: 2rem;
+    color: var(--color-3);
+    margin-right: 24px;
+}
+.navbar a.active::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: var(--color-3);
+}
+.toggle{
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+}
+.toggle .toggle-icon{
+    font-size: 2rem;
+    color: var(--color-3);
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 7% 0;
+}
+.home .home-content{
+    max-width: 440px;
+}
+.home-content h3{
+    font-size: 3.2rem;
+    line-height: .4;
+}
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: bold;
+    color: var(--color-2);
+    margin-bottom: 4px;
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-2);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--color-2);
+    margin: 25px 15px 30px 0;
+    box-shadow: 0 2px 5px var(--color-2);
+    transition: .5s ease;
+}
+.social-media a:hover{
+    background: var(--color-2);
+    color: var(--color-3);
+}
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--color-2);
+    color: var(--color-3);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    font-size: 1.6rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px var(--color-2);
+    letter-spacing: 1px;
+    transition: .5s ease;
+}
+.btn:hover{
+    background: transparent;
+    color: var(--color-2);
+    border-color: var(--color-2);
+}
+
+.home .profession-container{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1068px;
+    height: 1068px;
+    overflow: hidden;
+}
+.profession-container .profession-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profession-box .profession{
+    position: absolute;
+    transform-origin: 534px;
+    left: 0;
+    transform: rotate(calc(360deg / 4*var(--i)));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-2);
+    background: var(--color-3);
+    padding: 13px 0;
+}
+.profession-box .profession:nth-child(1) i{
+    margin-right: 15px;
+    padding-bottom: 8px;
+}
+.profession-box .profession:nth-child(2) i{
+    margin-left: 32px;
+    padding-bottom: 8px;
+}
+.profession-box .profession:nth-child(3) i{
+    padding-bottom: 8px;
+    margin-left: 32px;
+}
+.profession-box .profession:nth-child(4) i{
+    padding-bottom: 8px;
+}
+.profession i{
+    font-size: 3.2rem;
+}
+.profession h3{
+    font-size: 3.2rem;
+    line-height: 1;
+    font-weight: bold;
+}
+.profession-box .circle{
+    width: 83%;
+    height: 83%;
+    border: 3px solid var(--color-2);
+    border-radius: 50%;
+}
+
+.profession-container .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 534px solid var(--color-1);
+    border-right: 534px solid var(--color-1);
+    border-bottom: 534px solid var(--color-1);
+    border-left: 534px solid transparent;
+}
+
+.home-img img{
+    position: absolute;
+    bottom: 24%;
+    right: 16%;
+    width: 24%;
+    pointer-events: none;
+}
