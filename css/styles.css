@@ -14,12 +14,20 @@
     --color-3: #fff;
 }
 
+.dark-mode{
+    --color-3: #030A15;
+}
+.dark-overlay{
+    --color-1: #fff;
+}
+
 html{
     font-size: 62.5%;
 }
 
 body{
     font-family: var(--fontRoboto-1);
+    background: var(--color-3);
 }
 
 *{
