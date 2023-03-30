@@ -34,7 +34,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 7%;
+    padding: 40px 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +44,7 @@ body{
 
 .header .logo{
     font-family: var(--font-logo);
-    font-size: 3.2rem;
+    font-size: 4rem;
     color: var(--color-2);
     margin-right: auto;
 }
@@ -52,7 +52,7 @@ body{
     position: relative;
     font-family: var(--fontRoboto-1);
     font-size: 2rem;
-    color: var(--color-3);
+    color: var(--color-1);
     margin-right: 24px;
 }
 .navbar a.active::before{
@@ -62,7 +62,7 @@ body{
     bottom: -6px;
     width: 100%;
     height: 2px;
-    background: var(--color-3);
+    background: var(--color-1);
 }
 .toggle{
     display: flex;
@@ -71,13 +71,14 @@ body{
 }
 .toggle .toggle-icon{
     font-size: 2rem;
-    color: var(--color-3);
+    color: var(--color-1);
 }
 
 .home{
     width: 100%;
     height: 100vh;
     display: flex;
+    justify-content: end;
     align-items: center;
     padding: 60px 7% 0;
 }
@@ -86,16 +87,25 @@ body{
 }
 .home-content h3{
     font-size: 3.2rem;
-    line-height: .4;
+    line-height: 1;
+    justify-content: end;
+    display: flex;
 }
 .home-content h1{
     font-size: 5.6rem;
     font-weight: bold;
     color: var(--color-2);
     margin-bottom: 4px;
+    display: flex;
+    justify-content: end;
 }
 .home-content p{
-    font-size: 1.6rem;
+    font-size: 2rem;
+    text-align: end;
+}
+.social-media{
+    display: flex;
+    justify-content: end;
 }
 .social-media a{
     display: inline-flex;
@@ -118,6 +128,7 @@ body{
 }
 .btn{
     display: inline-block;
+    float: right;
     padding: 12px 28px;
     background: var(--color-2);
     color: var(--color-3);
@@ -138,10 +149,10 @@ body{
 .home .profession-container{
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 0;
     transform: translateY(-50%);
-    width: 1068px;
-    height: 1068px;
+    width: 1140px;
+    height: 1140px;
     overflow: hidden;
 }
 .profession-container .profession-box{
@@ -157,42 +168,44 @@ body{
 }
 .profession-box .profession{
     position: absolute;
-    transform-origin: 534px;
+    transform-origin: 570px;
     left: 0;
     transform: rotate(calc(360deg / 4*var(--i)));
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     color: var(--color-2);
     background: var(--color-3);
-    padding: 13px 0;
+    padding: 14px 0;
 }
 .profession-box .profession:nth-child(1) i{
-    margin-right: 15px;
-    padding-bottom: 8px;
+    margin-right: 49px;
+    padding-top: 8px;
 }
 .profession-box .profession:nth-child(2) i{
     margin-left: 32px;
-    padding-bottom: 8px;
+    padding-top: 8px;
 }
 .profession-box .profession:nth-child(3) i{
-    padding-bottom: 8px;
+    padding-top: 8px;
     margin-left: 32px;
 }
 .profession-box .profession:nth-child(4) i{
-    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-right: 40px;
 }
 .profession i{
     font-size: 3.2rem;
 }
 .profession h3{
-    font-size: 3.2rem;
+    font-size: 4rem;
     line-height: 1;
     font-weight: bold;
+    transform: rotate(180deg);
 }
 .profession-box .circle{
-    width: 83%;
-    height: 83%;
+    width: 75%;
+    height: 75%;
     border: 3px solid var(--color-2);
     border-radius: 50%;
 }
@@ -203,16 +216,16 @@ body{
     right: 0;
     width: 0;
     height: 0;
-    border-top: 534px solid var(--color-1);
-    border-right: 534px solid var(--color-1);
-    border-bottom: 534px solid var(--color-1);
-    border-left: 534px solid transparent;
+    border-top: 570px solid var(--color-1);
+    border-right: 570px solid transparent;
+    border-bottom: 570px solid var(--color-1);
+    border-left: 570px solid var(--color-1);
 }
 
 .home-img img{
     position: absolute;
-    bottom: 24%;
-    right: 16%;
-    width: 24%;
+    top: 25%;
+    left: 12.5%;
+    width: 470px;
     pointer-events: none;
 }
