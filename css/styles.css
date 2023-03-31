@@ -455,7 +455,7 @@ body{
     font-family: var(--fontRoboto-1);
     font-size: 4rem;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .container{
     padding: 10px 50px;
@@ -494,12 +494,17 @@ body{
   }
   .text-box{
     padding: 20px 30px;
-    background: var(--color-2);
+    background: var(--color-1);
+    box-shadow: 0 0 56px var(--color-2);
     position: relative;
     border-radius: 6px;
     font-size: 1.6rem;
     font-family: var(--fontRoboto-1);
     color: var(--color-3);
+    transition: 0.3s;
+  }
+  .text-box:hover{
+    transform: scale(1.05);
   }
   .left-container{
     left: 0;
@@ -556,7 +561,7 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid var(--color-2);
+    border-left: 15px solid var(--color-1);
     right: -15px;
   }
   .right-container-arrow{
@@ -567,7 +572,7 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid var(--color-2);
+    border-right: 15px solid var(--color-1);
     left: -15px;
   }
   
@@ -612,12 +617,14 @@ body{
   .timeline-edu{
     position: relative;
     max-width: 1024px;
+    margin: auto;
   }
   .title-edu h2{
-    color: var(--colorSecond);
-    font-family: var(--font-1);
-    font-size: var(--h2-mobile);
+    color: var(--color-3);
+    font-family: var(--fontRoboto-1);
+    font-size: 4rem;
     text-align: center;
+    margin-bottom: 16px;
   }
   .container-edu{
     padding: 10px 50px;
@@ -654,13 +661,17 @@ body{
   
   .text-box-edu{
     padding: 20px 30px;
-    background: var(--colorPrimary-1);
-    box-shadow: 0 0 56px var(--colorPrimary-2);
+    background: var(--color-1);
+    box-shadow: 0 0 56px var(--color-2);
     position: relative;
     border-radius: 6px;
-    font-size: var(--p-mobile);
-    font-family: var(--font-1);
-    color: var(--colorSecond);
+    font-size: 1.6rem;
+    font-family: var(--fontRoboto-1);
+    color: var(--color-3);
+    transition: 0.3s;
+  }
+  .text-box-edu:hover{
+    transform: scale(1.05);
   }
   .left-container-edu{
     left: 0;
@@ -685,7 +696,7 @@ body{
     position: absolute;
     width: 6px;
     height: 100%;
-    background-color: var(--colorSecond);
+    background-color: var(--color-3);
     top: 0;
     left: 50%;
     margin-left: -3px;
@@ -701,13 +712,13 @@ body{
     }
   }
   .text-box-edu h3{
-    font-family: var(--font-1);
-    font-weight: var(--wBold);
-    font-size: var(--h3-mobile);
+    font-family: var(--fontRoboto-1);
+    font-weight: bold;
+    font-size: 2rem;
   }
   .text-box-edu small{
-    font-family: var(--font-1);
-    font-size: var(--small-mobile);
+    font-family: var(--fontRoboto-1);
+    font-size: 1.6rem;
   }
   .left-container-edu-arrow{
     height: 0;
@@ -717,7 +728,7 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid var(--colorPrimary-1);
+    border-left: 15px solid var(--color-1);
     right: -15px;
   }
   .right-container-edu-arrow{
@@ -728,7 +739,7 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid var(--colorPrimary-1);
+    border-right: 15px solid var(--color-1);
     left: -15px;
   }
   
@@ -820,4 +831,26 @@ body{
     100%{
         transform: rotate(360deg);
     }
+}
+
+footer{
+  background-color: var(--color-3);
+  margin-top: 40px;
+}
+footer .made{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+footer p{
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: var(--fontRoboto-1);
+  color: var(--color-1);
+}
+footer .bxs-heart{
+  font-size: 1.6rem;
+  font-weight: bold;
 }
