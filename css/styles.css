@@ -9,7 +9,7 @@
     --fontRoboto-1: 'Roboto', sans-serif;
 
     /*--COLORS--*/
-    --color-1: #030A15;
+    --color-1: #030a15;
     --color-2: #6633CC;
     --color-3: #fff;
 }
@@ -42,6 +42,26 @@ body{
     z-index: 100;
     background: transparent;
 }
+.header.transparent{
+    background-color: transparent;
+}
+.header.active{
+    background-color: rgba(3, 10, 21, 0.50);
+    backdrop-filter: blur(5px);
+    transition: 0.5s;
+}
+.header-portf{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background: transparent;
+}
 
 .header .logo{
     font-family: var(--font-logo);
@@ -61,15 +81,11 @@ body{
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
+    transition: 0.3s;
 }
-.navbar a.active::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 2px;
-    background: var(--color-3);
+.navbar a:active,
+.navbar a:hover{
+    color: var(--color-2);
 }
 .toggle{
     display: flex;
@@ -82,6 +98,44 @@ body{
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 3s;
+}
+.header-portfolio{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background: transparent;
+}
+.logo-portf{
+    font-family: var(--font-logo);
+    font-size: 4rem;
+    color: var(--color-2);
+    margin-right: auto;
+}
+.header-portfolio .navbar a{
+    position: relative;
+    display: inline-block;
+    font-family: var(--fontRoboto-1);
+    font-size: 2rem;
+    color: var(--color-3);
+    margin-right: 24px;
+}
+.navbar-portf a{
+    position: relative;
+    display: inline-block;
+    font-family: var(--fontRoboto-1);
+    font-size: 2rem;
+    color: var(--color-3);
+    margin-right: 24px;
+}
+.toggle-portf .toggle-icon{
+    font-size: 2rem;
+    color: var(--color-3);
 }
 
 .home{
@@ -264,6 +318,454 @@ body{
     opacity: 1 !important;
     animation: slideRight 1s ease forwards;
 }
+
+/*==CARDS==*/
+.cards-contain{
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin: 16px 8px;
+  }
+  .cards-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .card a{
+    background-color: var(--color-2);
+    scroll-snap-align: center;
+    min-width: 235px;
+    border-radius: 16px;
+    height: 330px;
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .card a:hover,
+  .card a:active{
+    box-shadow: 0 0 9px 6px var(--color-2);
+    transform: scale(1.04);
+  }
+  .card a.no-underline {
+    text-decoration: none;
+  }
+  .card img{
+    height: 70%;
+    width: 100%;
+    background-size: cover;
+    background-position: center top;
+  }
+  .card h2{
+    font-family: var(--font-1);
+    font-size: var(--h2-mobile);
+    color: var(--color-1);
+  }
+  .icons-card{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 8px;
+    color: var(--color-1);
+  }
+  .icons-card img{
+    height: 32px;
+  }
+  .card i{
+    font-size: 3.2rem;
+  }
+  .img1{
+    background-image: url(/assets/imgs/appRecipes.jpeg);
+    border-radius: 16px 16px 0 0;
+  }
+  .img2{
+    background-image: url(/assets/imgs/corazonverde.png);
+    border-radius: 16px 16px 0 0;
+  }
+  .img3{
+    background-image: url(/assets/imgs/landingPage-eduSoft.jpg);
+    border-radius: 16px 16px 0 0;
+  }
+  .img4{
+    background-image: url(/assets/imgs/weatherApp.jpg);
+    border-radius: 16px 16px 0 0;
+  }
+  .img5{
+    background-image: url(/assets/imgs/imgCarritoJuanita.png);
+    border-radius: 16px 16px 0 0;
+  }
+  .img6{
+    background-image: url(/assets/imgs/autoSelecto.png);
+    border-radius: 16px 16px 0 0;
+  }
+  .img7{
+    background-image: url(/assets/imgs/NOtasLeon.png);
+    border-radius: 16px 16px 0 0;
+  }
+/*====*/
+
+/*==SECTION TECNOLOGÍAS QUE DOMINO==*/
+.techs{
+    margin-top: 200px;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    margin-top: 1%;
+    width: 100%;
+    background-color: var(--color-1);
+  }
+  .techs h2{
+    text-align: center;
+    color: var(--color-3);
+    font-family: var(--fontRoboto-1);
+    font-size: 4rem;
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+  .techs div{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding: 28px;
+    gap: 100px;
+  }
+  .techs img{
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .techs img:hover{
+    scale: 1.3;
+  }
+/*=====*/
+/*=====Laboral Timeline=====*/
+.laboral{
+    padding-top: 48px;
+  }
+  .timeline-laboral{
+    position: relative;
+    max-width: 1024px;
+    margin: auto;
+  }
+  .title-laboral h2{
+    color: var(--color-3);
+    font-family: var(--fontRoboto-1);
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown .2s linear forwards;
+    opacity: 0;
+  }
+  @keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  .container:nth-child(1){
+    animation-delay: 0s;
+  }
+  .container:nth-child(2){
+    animation-delay: .5s;
+  }
+  .container:nth-child(3){
+    animation-delay: 1s;
+  }
+  .container:nth-child(4){
+    animation-delay: 1.5s;
+  }
+  .container:nth-child(5){
+    animation-delay: 2s;
+  }
+  .container:nth-child(6){
+    animation-delay: 2.5s;
+  }
+  .text-box{
+    padding: 20px 30px;
+    background: var(--color-2);
+    position: relative;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    font-family: var(--fontRoboto-1);
+    color: var(--color-3);
+  }
+  .left-container{
+    left: 0;
+  }
+  .right-container{
+    left: 50%;
+  }
+  .container img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+  }
+  .right-container img{
+    left: -20px;
+  }
+  
+  .timeline-laboral::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: var(--color-3);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 2.9s linear forwards;
+  }
+  @keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+  }
+  .text-box h3{
+    font-family: var(--fontRoboto-1);
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .text-box small{
+    font-family: var(--fontRoboto-1);
+    font-size: 1.6rem;
+  }
+  .left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid var(--color-2);
+    right: -15px;
+  }
+  .right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--color-2);
+    left: -15px;
+  }
+  
+  @media screen and (max-width: 600px){
+    .timeline-laboral{
+        margin: 8px auto;
+    }
+    .timeline-laboral::after{
+        left: 31px;
+        background-color: var(--color-3);
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+        margin-bottom: 19px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container img,
+    .right-container img{
+        left: 10px;
+    }
+    .left-container-arrow,
+    .right-container-arrow{
+        border-right: 15px solid var(--color-2);
+        border-left: 0;
+        left: -15px;
+    }
+  }
+/*=======================*/
+/*=====Educación Timeline=====*/
+.edu{
+    padding-top: 64px;
+  }
+  .timeline-edu{
+    position: relative;
+    max-width: 1024px;
+  }
+  .title-edu h2{
+    color: var(--colorSecond);
+    font-family: var(--font-1);
+    font-size: var(--h2-mobile);
+    text-align: center;
+  }
+  .container-edu{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown .2s linear forwards;
+    opacity: 0;
+  }
+  @keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  .container-edu:nth-child(1){
+    animation-delay: 0s;
+  }
+  .container-edu:nth-child(2){
+    animation-delay: .5s;
+  }
+  .container-edu:nth-child(3){
+    animation-delay: 1s;
+  }
+  .container-edu:nth-child(4){
+    animation-delay: 1.5s;
+  }
+  .container-edu:nth-child(5){
+    animation-delay: 2s;
+  }
+  
+  .text-box-edu{
+    padding: 20px 30px;
+    background: var(--colorPrimary-1);
+    box-shadow: 0 0 56px var(--colorPrimary-2);
+    position: relative;
+    border-radius: 6px;
+    font-size: var(--p-mobile);
+    font-family: var(--font-1);
+    color: var(--colorSecond);
+  }
+  .left-container-edu{
+    left: 0;
+  }
+  .right-container-edu{
+    left: 50%;
+  }
+  .container-edu img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+  }
+  .right-container-edu img{
+    left: -20px;
+  }
+  
+  .timeline-edu::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: var(--colorSecond);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 2.5s linear forwards;
+  }
+  @keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+  }
+  .text-box-edu h3{
+    font-family: var(--font-1);
+    font-weight: var(--wBold);
+    font-size: var(--h3-mobile);
+  }
+  .text-box-edu small{
+    font-family: var(--font-1);
+    font-size: var(--small-mobile);
+  }
+  .left-container-edu-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid var(--colorPrimary-1);
+    right: -15px;
+  }
+  .right-container-edu-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--colorPrimary-1);
+    left: -15px;
+  }
+  
+  @media screen and (max-width: 600px){
+    .timeline-edu{
+        margin: 8px auto;
+    }
+    .timeline-edu::after{
+        left: 90.6%;
+        background-color: var(--colorSecond);
+    }
+    .container-edu{
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 23%;
+    }
+    .text-box-edu{
+        font-size: 13px;
+    }
+    .text-box-edu small{
+        margin-bottom: 19px;
+    }
+    .right-container-edu{
+        left: 0;
+    }
+    .left-container-edu img,
+    .right-container-edu img{
+        left: 85.5%;
+    }
+    .left-container-edu-arrow,
+    .right-container-edu-arrow{
+        border-right: 0;
+        border-left: 15px solid var(--colorPrimary-1);
+        left: 100%;
+    }
+  }
+/*=====Educación Timeline END=====*/
 
 /* KEYFRAMES ANIMATION */
 
