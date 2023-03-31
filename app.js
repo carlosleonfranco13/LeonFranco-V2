@@ -1,3 +1,4 @@
+//-- ACTIVACIÓN DEL "SCROLL-BG-HEADER" index.html --// 
 const bgHeader = document.querySelector('.header');
 
 const headerHeight = bgHeader.offsetHeight;
@@ -13,3 +14,4 @@ window.addEventListener('scroll', () => {
         bgHeader.classList.add('transparent');
     }
 });
+//-- "SCROLL-BG-HEADER" index.html - END --// 
