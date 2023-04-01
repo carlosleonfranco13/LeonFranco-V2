@@ -761,6 +761,7 @@ body{
   padding-top: 32px;
   width: 50%;
   margin: 8% auto;
+  height: 100%;
 }
 .form h2{
   font-size: 4rem;
@@ -975,14 +976,13 @@ textarea{
 /*===== FORM END =====*/
 
 /*===== FOOTER =====*/
-footer{
+#contact footer{
   background-color: var(--color-3);
-  margin-top: 40px;
+  justify-self: end;
 }
 footer .made{
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 8px;
   padding: 8px;
 }
@@ -998,13 +998,13 @@ footer .bxs-heart{
 }
 /*===== FOOTER END =====*/
 
-
-
-
-
+#contact{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 /* KEYFRAMES ANIMATION */
-
 @keyframes slideRight {
     0%{
         opacity: 0;
