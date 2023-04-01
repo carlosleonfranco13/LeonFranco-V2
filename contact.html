@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>León Franco</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="contact">
+    <header class="header">
+      <a href="#" class="logo">León Franco</a>
+
+      <nav class="navbar">
+        <a href="/index.html" style="--i: 12">Acerca de mi</a>
+        <a href="/portfolio.html" style="--i: 13">Portfolio</a>
+        <a href="/contact.html" style="--i: 14">Contáctame</a>
+      </nav>
+
+      <div class="toggle">
+        <i class="bx bx-moon toggle-icon"></i>
+      </div>
+    </header>
+
+    <section class="form">
+      <h2>Contáctame</h2>
+
+      <form id="form" class="form-group" action="" method="POST">
+        <div>
+          <input type="text" id="name" name="nombre" placeholder="Nombre:" />
+        </div>
+        <div>
+          <input type="email" id="email" name="email" placeholder="e-Mail:" />
+        </div>
+        <div>
+          <textarea
+            name="mensaje"
+            id="mensaje"
+            placeholder="Mensaje:"
+          ></textarea>
+        </div>
+        <div>
+          <button type="submit" value="Enviar" id="botonForm" disabled>
+            Enviar
+          </button>
+        </div>
+      </form>
+
+      <div id="spinner" class="hidden">
+        <div class="sk-chase">
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
