@@ -33,7 +33,7 @@
 }
 .home .profession-container {
   position: absolute;
-  top: 20%;
+  top: 18%;
   left: 0;
   transform: translateY(-40%);
   width: 320px;
@@ -69,15 +69,15 @@
 }
 .profession-box .profession:nth-child(1) i {
   margin-top: 32px;
-  margin-left: -65px;
+  margin-left: -73px;
   margin-bottom: 15px;
   padding-top: 1px;
   padding-left: 13px;
   padding-bottom: 16px;
 }
 .profession-box .profession:nth-child(2) i {
-  margin-top: 168px;
-  margin-left: -49px;
+  margin-top: 158px;
+  margin-left: -53px;
   margin-bottom: 125px;
   padding-top: 1px;
   padding-left: 13px;
@@ -88,7 +88,7 @@
   margin-left: -37px;
 }
 .profession-box .profession:nth-child(4) i {
-  margin-top: 133px;
+  margin-top: 109px;
   margin-left: -66px;
   margin-bottom: 125px;
   padding-top: 1px;
@@ -108,6 +108,7 @@
 }
 .profession-box .profession:nth-child(1) h3 {
   margin-left: -32px;
+  margin-top: 1px;
 }
 .profession-box .profession:nth-child(2) h3 {
   margin-left: -3px;
@@ -118,6 +119,7 @@
 }
 .profession-box .profession:nth-child(4) h3 {
   margin-left: -20px;
+  margin-top: -24px;
 }
 .profession-box .circle {
   width: 320px;

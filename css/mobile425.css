@@ -36,8 +36,8 @@
     top: 20%;
     left: 0;
     transform: translateY(-40%);
-    width: 375px;
-    height: 375px;
+    width: 425px;
+    height: 425px;
     overflow: hidden;
     background-position-x: none;
   }
@@ -57,7 +57,7 @@
   }
   .profession-box .profession {
     position: absolute;
-    transform-origin: 200px;
+    transform-origin: 212.5px;
     left: -30px;
     transform: rotate(calc(360deg / 4 * var(--i)));
     display: flex;
@@ -68,7 +68,7 @@
     padding: 1px;
   }
   .profession-box .profession:nth-child(1) i {
-    margin-top: 32px;
+    margin-top: 37px;
     margin-left: -65px;
     margin-bottom: 15px;
     padding-top: 1px;
@@ -76,7 +76,7 @@
     padding-bottom: 16px;
   }
   .profession-box .profession:nth-child(2) i {
-    margin-top: 109px;
+    margin-top: 78px;
     margin-left: -49px;
     margin-bottom: 125px;
     padding-top: 1px;
@@ -84,11 +84,11 @@
     padding-bottom: 16px;
   }
   .profession-box .profession:nth-child(3) i {
-    padding-top: 8px;
+    padding-top: 0px;
     margin-left: -37px;
   }
   .profession-box .profession:nth-child(4) i {
-    margin-top: 174px;
+    margin-top: 194px;
     margin-left: -66px;
     margin-bottom: 125px;
     padding-top: 1px;
@@ -108,21 +108,23 @@
   }
   .profession-box .profession:nth-child(1) h3 {
     margin-left: -32px;
+    margin-top: -2px;
   }
   .profession-box .profession:nth-child(2) h3 {
-    margin-left: -30px;
-    margin-top: -32px;
+    margin-left: -45px;
+    margin-top: -57px;
   }
   .profession-box .profession:nth-child(3) h3 {
-    margin-left: -52px;
+    margin-left: -75px;
+    margin-top: -2px;
   }
   .profession-box .profession:nth-child(4) h3 {
-    margin-left: -47px;
-    margin-top: 45px;
+    margin-left: -61px;
+    margin-top: 59px;
   }
   .profession-box .circle {
-    width: 375px;
-    height: 375px;
+    width: 425px;
+    height: 425px;
     border: 3px solid var(--color-2);
     border-radius: 50%;
   }
@@ -132,19 +134,19 @@
     right: 0;
     width: 0;
     height: 0;
-    border-top: 187.5px solid var(--color-3);
-    border-right: 187.5px solid var(--color-3);
-    border-bottom: 187.5px solid transparent;
-    border-left: 187.5px solid var(--color-3);
+    border-top: 212.5px solid var(--color-3);
+    border-right: 212.5px solid var(--color-3);
+    border-bottom: 212.5px solid transparent;
+    border-left: 212.5px solid var(--color-3);
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 0.2s;
   }
   .home-img img {
     position: absolute;
-    top: 68px;
-    left: 70px;
-    width: 240px;
+    top: 81px;
+    left: 90px;
+    width: 248px;
     pointer-events: none;
     opacity: 1 !important;
     animation: slideRight 1s ease forwards;
@@ -186,7 +188,7 @@
     gap: 8px;
   }
   .techs img {
-      height: 37px;
+      height: 42px;
     }
   .techs img:hover {
       scale: 1;
