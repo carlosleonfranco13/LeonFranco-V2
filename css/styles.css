@@ -96,7 +96,7 @@ body {
 }
 .toggle .toggle-icon {
   font-size: 2rem;
-  color: var(--color-3);
+  color: var(--color-2);
   opacity: 0;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1.5s;

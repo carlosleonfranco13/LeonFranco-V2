@@ -1,0 +1,207 @@
+:root {
+  /*--FONT-FAMILY--*/
+  --font-logo: "Reey", sans-serif;
+  --fontRoboto-1: "Roboto", sans-serif;
+  /*--COLORS--*/
+  --color-1: #030a15;
+  --color-2: #6633cc;
+  --color-3: #fff;
+}
+
+.header {
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background: transparent;
+}
+.header .logo {
+  font-size: 3.2rem;
+}
+.navbar a {
+  display: none;
+}
+.toggle {
+  display: none;
+}
+
+.home {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home .profession-container {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  transform: translateY(-40%);
+  width: 768px;
+  height: 768px;
+  overflow: hidden;
+  background-position-x: none;
+}
+.profession-container .profession-box {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: slideRight 1s ease forwards, professionRotate 10s ease-out infinite;
+  animation-delay: 0.7s;
+}
+.profession-box .profession {
+  position: absolute;
+  transform-origin: 404px;
+  left: -30px;
+  transform: rotate(calc(360deg / 4 * var(--i)));
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: var(--color-2);
+  background: transparent;
+  padding: 1px;
+}
+.profession-box .profession:nth-child(1) i {
+  margin-top: 32px;
+  margin-left: -100px;
+  margin-bottom: 15px;
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-bottom: 16px;
+}
+.profession-box .profession:nth-child(2) i {
+  margin-top: 115px;
+  margin-left: -70px;
+  margin-bottom: 125px;
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-bottom: 16px;
+}
+.profession-box .profession:nth-child(3) i {
+  padding-top: 0px;
+  margin-left: -62px;
+}
+.profession-box .profession:nth-child(4) i {
+  margin-top: 142px;
+  margin-left: -102px;
+  margin-bottom: 125px;
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-bottom: 16px;
+}
+.profession i {
+  font-size: 3rem;
+}
+.profession h3 {
+  font-size: 2.4rem;
+  line-height: 0.05;
+  font-weight: bold;
+  transform: rotate(90deg);
+  background: var(--color-1);
+  padding: 9px 3px;
+}
+.profession-box .profession:nth-child(1) h3 {
+  margin-left: -64px;
+  margin-top: 3px;
+}
+.profession-box .profession:nth-child(2) h3 {
+  margin-left: -45px;
+  margin-top: -15px;
+}
+.profession-box .profession:nth-child(3) h3 {
+  margin-left: -58px;
+  margin-top: -1px;
+}
+.profession-box .profession:nth-child(4) h3 {
+  margin-left: -71px;
+  margin-top: 9px;
+}
+.profession-box .circle {
+  width: 768px;
+  height: 768px;
+  border: 5px solid var(--color-2);
+  border-radius: 50%;
+}
+.profession-container .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 384px solid var(--color-3);
+  border-right: 384px solid var(--color-3);
+  border-bottom: 384px solid transparent;
+  border-left: 384px solid var(--color-3);
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.2s;
+}
+.home-img img {
+  position: absolute;
+  top: 90px;
+  left: 160px;
+  width: 448px;
+  pointer-events: none;
+  opacity: 1 !important;
+  animation: slideRight 1s ease forwards;
+}
+
+.home .home-content {
+  margin-top: 840px;
+  max-width: 320px;
+}
+.home-content h3 {
+  font-size: 3.2rem;
+  justify-content: center;
+}
+.home-content h1 {
+  font-size: 4rem;
+  justify-content: center;
+}
+.home-content p {
+  font-size: 1.6rem;
+  text-align: start;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.techs h2 {
+  font-size: 2.4rem;
+  margin-top: 240px;
+  margin-bottom: 10px;
+}
+.techs div {
+  padding: 0px;
+  gap: 8px;
+}
+.techs img {
+  height: 42px;
+}
+.techs img:hover {
+  scale: 1;
+}
+
+.laboral {
+  padding-top: 32px;
+}
+.title-laboral h2 {
+  font-size: 2.4rem;
+}
+
+.bx-menu {
+  font-size: 3.2rem;
+  color: var(--color-2);
+}
