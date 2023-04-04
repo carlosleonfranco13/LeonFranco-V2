@@ -1,0 +1,321 @@
+:root {
+  /*--FONT-FAMILY--*/
+  --font-logo: "Reey", sans-serif;
+  --fontRoboto-1: "Roboto", sans-serif;
+  /*--COLORS--*/
+  --color-1: #030a15;
+  --color-2: #6633cc;
+  --color-3: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--fontRoboto-1);
+  background: var(--color-1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background: transparent;
+}
+.header.transparent {
+  background-color: transparent;
+}
+.header.active {
+  background-color: rgba(3, 10, 21, 0.5);
+  backdrop-filter: blur(5px);
+  transition: 0.5s;
+}
+.header .logo {
+  font-family: var(--font-logo);
+  font-size: 4rem;
+  color: var(--color-2);
+  margin-right: auto;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+#portfolio .logo {
+  opacity: 1;
+  animation: none;
+}
+#contact .logo {
+  opacity: 1;
+  animation: none;
+}
+.navbar a {
+  position: relative;
+  display: inline-block;
+  font-family: var(--fontRoboto-1);
+  font-size: 2rem;
+  color: var(--color-3);
+  margin-right: 24px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
+  transition: 0.3s;
+}
+#portfolio .navbar a {
+  opacity: 1;
+  animation: none;
+}
+#contact .navbar a {
+  opacity: 1;
+  animation: none;
+}
+.navbar a.active {
+  color: var(--color-2);
+  font-weight: bold;
+}
+.navbar a:active,
+.navbar a:hover {
+  color: var(--color-2);
+}
+.toggle {
+  display: flex;
+  margin-top: 1px;
+  cursor: pointer;
+}
+.toggle .toggle-icon {
+  font-size: 2rem;
+  color: var(--color-2);
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.5s;
+}
+#portfolio .toggle .toggle-icon {
+  animation: none;
+  opacity: 1;
+}
+#contact .toggle .toggle-icon {
+  animation: none;
+  opacity: 1;
+}
+.home {
+  width: 100%;
+  height: 723px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 60px 7% 0;
+}
+.home .home-content {
+  max-width: 264px;
+  margin-top: -29px;
+}
+.home-content h3 {
+  font-size: 2.4rem;
+  line-height: 1;
+  justify-content: end;
+  display: flex;
+  color: var(--color-3);
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.9s;
+}
+.home-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--color-2);
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: end;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.1s;
+}
+.home-content p {
+  font-size: 1.6rem;
+  text-align: end;
+  color: var(--color-3);
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1.3s;
+}
+.social-media {
+  display: flex;
+  justify-content: end;
+}
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color-2);
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--color-2);
+  margin: 20px 16px 20px 0;
+  box-shadow: 0 2px 5px var(--color-2);
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.social-media a:hover {
+  background: var(--color-2);
+  color: var(--color-3);
+}
+.btn {
+  display: inline-block;
+  float: right;
+  padding: 10px 16px;
+  background: var(--color-2);
+  color: var(--color-3);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px var(--color-2);
+  letter-spacing: 1px;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.6s;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--color-2);
+  border-color: var(--color-2);
+}
+
+.home .profession-container {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+}
+.profession-container .profession-box {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: slideRight 1s ease forwards, professionRotate 10s ease-out infinite;
+  animation-delay: 0.7s;
+}
+.profession-box .profession {
+  position: absolute;
+  transform-origin: 340px;
+  left: 0px;
+  transform: rotate(calc(360deg / 4 * var(--i)));
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  color: var(--color-2);
+  background: var(--color-1);
+  padding: 10px 0;
+}
+.profession-box .profession:nth-child(1) i {
+  margin-right: -27px;
+  padding-top: 0px;
+}
+.profession-box .profession:nth-child(2) i {
+  margin-left: 56px;
+  padding-top: 8px;
+}
+.profession-box .profession:nth-child(3) i {
+  padding-top: 0px;
+  margin-left: 40px;
+}
+.profession-box .profession:nth-child(4) i {
+  padding-top: 0px;
+  margin-right: -20px;
+}
+
+.profession-box .profession:nth-child(1) h3 {
+    margin-left: 31px;
+    margin-top: -8px;
+  }
+  .profession-box .profession:nth-child(2) h3 {
+    margin-left: 45px;
+    margin-top: -5px;
+  }
+  .profession-box .profession:nth-child(3) h3 {
+    margin-left: 37px;
+    margin-top: -2px;
+  }
+  .profession-box .profession:nth-child(4) h3 {
+    margin-left: 23px;
+    margin-top: -3px;
+  }
+.profession i {
+  font-size: 3rem;
+}
+.profession h3 {
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: bold;
+  transform: rotate(180deg);
+}
+.profession-box .circle {
+  width: 65%;
+  height: 65%;
+  border: 8px solid var(--color-2);
+  border-radius: 50%;
+}
+
+.profession-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 350px solid var(--color-3);
+  border-right: 350px solid transparent;
+  border-bottom: 350px solid var(--color-3);
+  border-left: 350px solid var(--color-3);
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.2s;
+}
+.home-img img {
+  position: absolute;
+  top: 18%;
+  left: 8%;
+  width: 348px;
+  pointer-events: none;
+  opacity: 1 !important;
+  animation: slideRight 1s ease forwards;
+}
+
+.techs {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 100%;
+    background-color: var(--color-1);
+  }
+  .techs h2{
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  .techs div{
+    padding: 0;
+  }
