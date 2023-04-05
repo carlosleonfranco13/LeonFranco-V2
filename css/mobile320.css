@@ -46,18 +46,28 @@
   display: block;
   margin: 32px;
 }
-.menu{
+
+/*=== BOTON MENU ===*/
+.menu .menuIcon{
   position: fixed;
   top: 0;
   right: 0;
   margin: 24px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 36px;
+  height: 36px;
 }
-/*=== BOTON MENU ===*/
-.menu .bx-menu span{
-  border-radius: 5px;
-  background: var(--color-1);
+.menu .menuIcon span{
+  border-radius: 10px;
+  background: var(--color-2);
+  display: block;
+  width: 60%;
+  margin: 4px auto;
+  height: 3px;
 }
-
 /*=== END BOTON MENU ===*/
 
 .toggle {

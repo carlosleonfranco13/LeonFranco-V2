@@ -26,8 +26,8 @@ forEach(link => {
 })
 //-- END --//
 
-/*============ BUTTON MENU ==============*/
-const btnMenu = document.querySelector('.bx-menu');
+/*============ NAV MENU ==============*/
+const btnMenu = document.querySelector('.menuIcon');
 const navBar = document.querySelector('.navbar');
 
 btnMenu.addEventListener('click', (e) => {
@@ -35,7 +35,15 @@ btnMenu.addEventListener('click', (e) => {
   navBar.classList.toggle('active');
   document.body.classList.toggle('opacity');
 });
-/*============ BUTTON MENU END ==============*/
+/*============ NAV MENU END ==============*/
+
+/*============ BUTTON MENU ==============*/
+const menu = document.querySelector('.menu');
+
+menu.addEventListener('click', (e) => {
+  menu.classList.toggle('open');
+})
+/*============ END BUTTON MENU ==============*/
 
 /*============FORM==============*/
 document.addEventListener("DOMContentLoaded", function () {
