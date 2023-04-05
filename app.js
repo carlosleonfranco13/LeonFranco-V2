@@ -28,8 +28,12 @@ forEach(link => {
 
 /*============ BUTTON MENU ==============*/
 const btnMenu = document.querySelector('.bx-menu');
+const navBar = document.querySelector('.navbar');
+
 btnMenu.addEventListener('click', (e) => {
-  console.log('Hola soy menu');
+
+  navBar.classList.toggle('active');
+  document.body.classList.toggle('opacity');
 });
 /*============ BUTTON MENU END ==============*/
 
