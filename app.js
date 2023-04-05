@@ -14,6 +14,7 @@ window.addEventListener('scroll', () => {
     }
 });
 //-- END --//
+
 //-- OBTENER LA CLASE ACTIVE DEL NAV Y ACTIVAR --// 
 const activePage = window.location.pathname;
 
@@ -24,6 +25,14 @@ forEach(link => {
     }
 })
 //-- END --//
+
+/*============ BUTTON MENU ==============*/
+const btnMenu = document.querySelector('.bx-menu');
+btnMenu.addEventListener('click', (e) => {
+  console.log('Hola soy menu');
+});
+/*============ BUTTON MENU END ==============*/
+
 /*============FORM==============*/
 document.addEventListener("DOMContentLoaded", function () {
     const email = {
@@ -138,4 +147,3 @@ document.addEventListener("DOMContentLoaded", function () {
       comprobarEmail();
     }
   });
-  

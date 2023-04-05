@@ -9,7 +9,8 @@
 }
 
 .header {
-  padding: 20px 8%;
+  width: 100%;
+  padding: 0px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,11 +18,40 @@
   background: transparent;
 }
 .header .logo {
+  display: flex;
+  align-self: start;
   font-size: 2.4rem;
+  padding: 24px;
+  top: 0;
 }
-.navbar a {
-  display: none;
+.nav-content{
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(3, 10, 21, 0.628);
+  backdrop-filter: blur(5px);
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px 0;
 }
+.navbar a{
+  display: block;
+  padding: 16px;
+}
+.menu{
+  z-index: 100;
+}
+.bx-menu{
+  font-size: 3.2rem;
+  color: var(--color-2);
+  margin-right: 16px;
+}
+
 .toggle {
   display: none;
 }
@@ -200,8 +230,3 @@
     font-size: 2.4rem;
   }
 
-.bx-menu{
-    font-size: 3.2rem;
-    color: var(--color-2);
-
-}
