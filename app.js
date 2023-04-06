@@ -38,7 +38,7 @@ btnMenu.addEventListener('click', (e) => {
 /*============ NAV MENU END ==============*/
 
 /*============ BUTTON MENU ==============*/
-const menu = document.querySelector('.menu');
+const menu = document.querySelector('.menu button');
 
 menu.addEventListener('click', (e) => {
   menu.classList.toggle('open');

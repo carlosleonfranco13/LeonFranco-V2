@@ -67,6 +67,82 @@
   width: 60%;
   margin: 4px auto;
   height: 3px;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.menu button.open .top-line{
+  animation-name: top-line-animation;
+}
+.menu button.open .middle-line{
+  animation-name: middle-line-animation;
+}
+.menu button.open .bottom-line{
+  animation-name: bottom-line-animation;
+}
+
+.menu button .top-line{
+  animation-name: top-line-animation-close;
+}
+.menu button .middle-line{
+  animation-name: middle-line-animation-close;
+}
+.menu button .bottom-line{
+  animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation {
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
+  }
+}
+@keyframes bottom-line-animation {
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+}
+@keyframes middle-line-animation {
+  20%, 100%{
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes top-line-animation-close {
+  0%{
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
+  }
+
+  50%, 100%{
+    margin: 4px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes middle-line-animation-close {
+  0%{
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+  20%, 100%{
+    margin: 0 auto;
+    width: 60%;
+    opacity: 1;
+  }
+}
+@keyframes bottom-line-animation-close {
+  0%{
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+  50%, 100%{
+    margin: 4px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 /*=== END BOTON MENU ===*/
 
