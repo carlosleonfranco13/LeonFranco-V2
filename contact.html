@@ -5,7 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>León Franco</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/pc1024.css" media="(max-width:1024px)" />
+    <link
+      rel="stylesheet"
+      href="/css/tablet768.css"
+      media="(max-width:768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/mobile425.css"
+      media="(max-width:425px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/mobile375.css"
+      media="(max-width:375px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/mobile320.css"
+      media="(max-width:320px)"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -21,11 +42,19 @@
     <header class="header">
       <a href="#" class="logo">León Franco</a>
 
-      <nav class="navbar">
+      <nav class="navbar active">
         <a href="/index.html" style="--i: 12">Acerca de mi</a>
         <a href="/portfolio.html" style="--i: 13">Portfolio</a>
         <a href="/contact.html" style="--i: 14">Contáctame</a>
-      </nav>
+    </nav>
+
+    <div class="menu">
+      <button class="menuIcon">
+        <span class="top-line"></span>
+        <span class="middle-line"></span>
+        <span class="bottom-line"></span>
+      </button>
+    </div>
 
       <div class="toggle">
         <i class="bx bx-moon toggle-icon"></i>

@@ -1,234 +1,383 @@
 :root {
-    /*--FONT-FAMILY--*/
-    --font-logo: "Reey", sans-serif;
-    --fontRoboto-1: "Roboto", sans-serif;
-    /*--COLORS--*/
-    --color-1: #030a15;
-    --color-2: #6633cc;
-    --color-3: #fff;
+  /*--FONT-FAMILY--*/
+  --font-logo: "Reey", sans-serif;
+  --fontRoboto-1: "Roboto", sans-serif;
+  /*--COLORS--*/
+  --color-1: #030a15;
+  --color-2: #6633cc;
+  --color-3: #fff;
+}
+
+.header {
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background: transparent;
+}
+.header .logo {
+  font-size: 2.4rem;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(3, 10, 21, 0.819);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease;
+}
+.navbar.active {
+  transform: translateX(100%);
+}
+.navbar a {
+  display: block;
+  margin: 32px;
+}
+/*=== BOTON MENU ===*/
+.menu {
+  display: flex;
+}
+.menu .menuIcon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 24px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+}
+.menu .menuIcon span {
+  border-radius: 10px;
+  background: var(--color-2);
+  display: block;
+  width: 60%;
+  margin: 4px auto;
+  height: 3px;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.menu button.open .top-line {
+  animation-name: top-line-animation;
+}
+.menu button.open .middle-line {
+  animation-name: middle-line-animation;
+}
+.menu button.open .bottom-line {
+  animation-name: bottom-line-animation;
+}
+
+.menu button .top-line {
+  animation-name: top-line-animation-close;
+}
+.menu button .middle-line {
+  animation-name: middle-line-animation-close;
+}
+.menu button .bottom-line {
+  animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation {
+  50%,
+  100% {
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
   }
-  
-  .header {
-    padding: 20px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100;
-    background: transparent;
+}
+@keyframes bottom-line-animation {
+  50%,
+  100% {
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
   }
-  .header .logo {
-    font-size: 2.4rem;
-  }
-  .navbar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(3, 10, 21, 0.819);
-    backdrop-filter: blur(5px);
-    transition: all 0.5s ease;
-  }
-  .navbar.active{
-    transform: translateX(100%);
-  }
-  .navbar a{
-    display: block;
-    margin: 32px;
-  }
-  .menu{
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 24px;
-  }
-  .bx-menu{
-    font-size: 3.2rem;
-    color: var(--color-2);
-  }
-  .toggle {
-    display: none;
-  }
-  
-  .home {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .home .profession-container {
-    position: absolute;
-    top: 17%;
-    left: 0;
-    transform: translateY(-40%);
-    width: 375px;
-    height: 375px;
-    overflow: hidden;
-    background-position-x: none;
-  }
-  .profession-container .profession-box {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: slideRight 1s ease forwards, professionRotate 10s ease-out infinite;
-    animation-delay: 0.7s;
-  }
-  .profession-box .profession {
-    position: absolute;
-    transform-origin: 200px;
-    left: -30px;
-    transform: rotate(calc(360deg / 4 * var(--i)));
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    color: var(--color-2);
-    background: transparent;
-    padding: 1px;
-  }
-  .profession-box .profession:nth-child(1) i {
-    margin-top: 32px;
-    margin-left: -65px;
-    margin-bottom: 15px;
-    padding-top: 1px;
-    padding-left: 13px;
-    padding-bottom: 16px;
-  }
-  .profession-box .profession:nth-child(2) i {
-    margin-top: 109px;
-    margin-left: -49px;
-    margin-bottom: 125px;
-    padding-top: 1px;
-    padding-left: 13px;
-    padding-bottom: 16px;
-  }
-  .profession-box .profession:nth-child(3) i {
-    padding-top: 8px;
-    margin-left: -37px;
-  }
-  .profession-box .profession:nth-child(4) i {
-    margin-top: 174px;
-    margin-left: -66px;
-    margin-bottom: 125px;
-    padding-top: 1px;
-    padding-left: 13px;
-    padding-bottom: 16px;
-  }
-  .profession i {
-    font-size: 2rem;
-  }
-  .profession h3 {
-    font-size: 1.6rem;
-    line-height: 0.05;
-    font-weight: bold;
-    transform: rotate(90deg);
-    background: var(--color-1);
-    padding: 9px 3px;
-  }
-  .profession-box .profession:nth-child(1) h3 {
-    margin-left: -32px;
-  }
-  .profession-box .profession:nth-child(2) h3 {
-    margin-left: -30px;
-    margin-top: -32px;
-  }
-  .profession-box .profession:nth-child(3) h3 {
-    margin-left: -52px;
-  }
-  .profession-box .profession:nth-child(4) h3 {
-    margin-left: -47px;
-    margin-top: 45px;
-  }
-  .profession-box .circle {
-    width: 375px;
-    height: 375px;
-    border: 3px solid var(--color-2);
-    border-radius: 50%;
-  }
-  .profession-container .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
+}
+@keyframes middle-line-animation {
+  20%,
+  100% {
+    margin: 0 auto;
     width: 0;
-    height: 0;
-    border-top: 187.5px solid var(--color-3);
-    border-right: 187.5px solid var(--color-3);
-    border-bottom: 187.5px solid transparent;
-    border-left: 187.5px solid var(--color-3);
     opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 0.2s;
   }
-  .home-img img {
-    position: absolute;
-    top: 68px;
-    left: 70px;
-    width: 240px;
-    pointer-events: none;
-    opacity: 1 !important;
-    animation: slideRight 1s ease forwards;
+}
+
+@keyframes top-line-animation-close {
+  0% {
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
   }
-  
-  .home .home-content {
-    margin-top: 340px;
-    max-width: 320px;
+
+  50%,
+  100% {
+    margin: 4px auto;
+    transform: translateY(0px) rotate(0deg);
   }
-  .home-content h3 {
-    font-size: 2rem;
-    justify-content: center;
+}
+@keyframes middle-line-animation-close {
+  0% {
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
   }
-  .home-content h1 {
-    font-size: 3.2rem;
-    justify-content: center;
+  20%,
+  100% {
+    margin: 0 auto;
+    width: 60%;
+    opacity: 1;
   }
-  .home-content p {
-    font-size: 1.6rem;
-    text-align: start;
+}
+@keyframes bottom-line-animation-close {
+  0% {
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
   }
-  .social-media {
-    display: flex;
-    justify-content: center;
+  50%,
+  100% {
+    margin: 4px auto;
+    transform: translateY(0px) rotate(0deg);
   }
-  .btn {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
+}
+/*=== END BOTON MENU ===*/
+
+/*==========TOGGLE BOTON MODO OSCURO=========*/
+.toggle {
+  display: none;
+}
+/*========END TOGGLE BOTON MODO OSCURO=======*/
+
+/*========== SECCIÓN ACERCA DE MI ===========*/
+.home {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home .profession-container {
+  position: absolute;
+  top: 17%;
+  left: 0;
+  transform: translateY(-40%);
+  width: 375px;
+  height: 375px;
+  overflow: hidden;
+  background-position-x: none;
+}
+.profession-container .profession-box {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: slideRight 1s ease forwards, professionRotate 10s ease-out infinite;
+  animation-delay: 0.7s;
+}
+.profession-box .profession {
+  position: absolute;
+  transform-origin: 200px;
+  left: -30px;
+  transform: rotate(calc(360deg / 4 * var(--i)));
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: var(--color-2);
+  background: transparent;
+  padding: 1px;
+}
+.profession-box .profession:nth-child(1) i {
+  margin-top: 32px;
+  margin-left: -65px;
+  margin-bottom: 15px;
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-bottom: 16px;
+}
+.profession-box .profession:nth-child(2) i {
+  margin-top: 109px;
+  margin-left: -49px;
+  margin-bottom: 125px;
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-bottom: 16px;
+}
+.profession-box .profession:nth-child(3) i {
+  padding-top: 8px;
+  margin-left: -37px;
+}
+.profession-box .profession:nth-child(4) i {
+  margin-top: 174px;
+  margin-left: -66px;
+  margin-bottom: 125px;
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-bottom: 16px;
+}
+.profession i {
+  font-size: 2rem;
+}
+.profession h3 {
+  font-size: 1.6rem;
+  line-height: 0.05;
+  font-weight: bold;
+  transform: rotate(90deg);
+  background: var(--color-1);
+  padding: 9px 3px;
+}
+.profession-box .profession:nth-child(1) h3 {
+  margin-left: -32px;
+}
+.profession-box .profession:nth-child(2) h3 {
+  margin-left: -30px;
+  margin-top: -32px;
+}
+.profession-box .profession:nth-child(3) h3 {
+  margin-left: -52px;
+}
+.profession-box .profession:nth-child(4) h3 {
+  margin-left: -47px;
+  margin-top: 45px;
+}
+.profession-box .circle {
+  width: 375px;
+  height: 375px;
+  border: 3px solid var(--color-2);
+  border-radius: 50%;
+}
+.profession-container .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 187.5px solid var(--color-3);
+  border-right: 187.5px solid var(--color-3);
+  border-bottom: 187.5px solid transparent;
+  border-left: 187.5px solid var(--color-3);
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.2s;
+}
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
-  
-  .techs h2 {
-    font-size: 2.4rem;
-    margin-top: 40px;
-    margin-bottom: 10px;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  .techs div {
-    padding: 0px;
-    gap: 8px;
+}
+.home-img img {
+  position: absolute;
+  top: 68px;
+  left: 70px;
+  width: 240px;
+  pointer-events: none;
+  opacity: 1 !important;
+  animation: slideTop 1s ease forwards;
+}
+.home .home-content {
+  margin-top: 340px;
+  max-width: 320px;
+}
+.home-content h3 {
+  font-size: 2rem;
+  justify-content: center;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1s;
+}
+.home-content h1 {
+  font-size: 3.2rem;
+  justify-content: center;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.3s;
+}
+.home-content p {
+  font-size: 1.6rem;
+  text-align: start;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.8s;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+.social-media a {
+  width: 40px;
+  height: 40px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 2.4s;
+}
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
   }
-  .techs img {
-      height: 37px;
-    }
-  .techs img:hover {
-      scale: 1;
-    }
-  
-    .laboral {
-      padding-top: 32px;
-    }
-    .title-laboral h2 {
-      font-size: 2.4rem;
-    }
-  
-  .bx-menu{
-      font-size: 3.2rem;
-      color: var(--color-2);
-  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+/*========== END SECCIÓN ACERCA DE MI ===========*/
+
+/*======= SECCIÓN TECNOLOGÍAS QUE DOMINO =======*/
+.techs h2 {
+  font-size: 2.4rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.techs div {
+  padding: 0px;
+  gap: 8px;
+}
+.techs img {
+  height: 37px;
+}
+.techs img:hover {
+  scale: 1;
+}
+/*==== END SECCIÓN TECNOLOGÍAS QUE DOMINO ====*/
+
+/*==== SECCIÓN CARRERA LABORAL ====*/
+.laboral {
+  padding-top: 32px;
+}
+.title-laboral h2 {
+  font-size: 2.4rem;
+}
+/*==== END SECCIÓN CARRERA LABORAL ====*/
+
+/*====SECTION CARDS CONTAIN=====*/
+.cards-contain {
+  margin-top: 49px;
+}
+/*=====END SECTION CARDS CONTAIN=====*/
+
+/*====SECTION CONTACT FORM=====*/
+.form {
+  width: 100%;
+  margin-top: 50%;
+}
+.form h2 {
+  display: none;
+}
+/*====END SECTION CONTACT FORM=====*/

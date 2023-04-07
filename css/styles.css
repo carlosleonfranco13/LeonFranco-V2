@@ -89,6 +89,13 @@ body {
 .navbar a:hover {
   color: var(--color-2);
 }
+
+/*=== BOTON MENU ===*/
+.menu{
+  display: none;
+}
+/*=== END BOTON MENU ===*/
+
 .toggle {
   display: flex;
   margin-top: 1px;

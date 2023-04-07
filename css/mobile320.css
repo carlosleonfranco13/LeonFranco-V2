@@ -25,7 +25,7 @@
   top: 0;
 }
 
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   right: 0;
@@ -39,16 +39,19 @@
   backdrop-filter: blur(5px);
   transition: all 0.5s ease;
 }
-.navbar.active{
+.navbar.active {
   transform: translateX(100%);
 }
-.navbar a{
+.navbar a {
   display: block;
   margin: 32px;
 }
 
 /*=== BOTON MENU ===*/
-.menu .menuIcon{
+.menu {
+  display: flex;
+}
+.menu .menuIcon {
   position: fixed;
   top: 0;
   right: 0;
@@ -60,7 +63,7 @@
   width: 36px;
   height: 36px;
 }
-.menu .menuIcon span{
+.menu .menuIcon span {
   border-radius: 10px;
   background: var(--color-2);
   display: block;
@@ -71,40 +74,43 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-.menu button.open .top-line{
+.menu button.open .top-line {
   animation-name: top-line-animation;
 }
-.menu button.open .middle-line{
+.menu button.open .middle-line {
   animation-name: middle-line-animation;
 }
-.menu button.open .bottom-line{
+.menu button.open .bottom-line {
   animation-name: bottom-line-animation;
 }
 
-.menu button .top-line{
+.menu button .top-line {
   animation-name: top-line-animation-close;
 }
-.menu button .middle-line{
+.menu button .middle-line {
   animation-name: middle-line-animation-close;
 }
-.menu button .bottom-line{
+.menu button .bottom-line {
   animation-name: bottom-line-animation-close;
 }
 
 @keyframes top-line-animation {
-  50%, 100%{
+  50%,
+  100% {
     margin: 0 auto;
     transform: translateY(2px) rotate(-45deg);
   }
 }
 @keyframes bottom-line-animation {
-  50%, 100%{
+  50%,
+  100% {
     margin: 0 auto;
     transform: translateY(-2px) rotate(45deg);
   }
 }
 @keyframes middle-line-animation {
-  20%, 100%{
+  20%,
+  100% {
     margin: 0 auto;
     width: 0;
     opacity: 0;
@@ -112,44 +118,50 @@
 }
 
 @keyframes top-line-animation-close {
-  0%{
+  0% {
     margin: 0 auto;
     transform: translateY(2px) rotate(-45deg);
   }
 
-  50%, 100%{
+  50%,
+  100% {
     margin: 4px auto;
     transform: translateY(0px) rotate(0deg);
   }
 }
 @keyframes middle-line-animation-close {
-  0%{
+  0% {
     margin: 0 auto;
     width: 0;
     opacity: 0;
   }
-  20%, 100%{
+  20%,
+  100% {
     margin: 0 auto;
     width: 60%;
     opacity: 1;
   }
 }
 @keyframes bottom-line-animation-close {
-  0%{
+  0% {
     margin: 0 auto;
     transform: translateY(-2px) rotate(45deg);
   }
-  50%, 100%{
+  50%,
+  100% {
     margin: 4px auto;
     transform: translateY(0px) rotate(0deg);
   }
 }
 /*=== END BOTON MENU ===*/
 
+/*==========TOGGLE BOTON MODO OSCURO=========*/
 .toggle {
   display: none;
 }
+/*========END TOGGLE BOTON MODO OSCURO=======*/
 
+/*========== SECCIÓN ACERCA DE MI ===========*/
 .home {
   flex-direction: column;
   justify-content: center;
@@ -262,8 +274,18 @@
   border-bottom: 160px solid transparent;
   border-left: 160px solid var(--color-3);
   opacity: 0;
-  animation: slideRight 1s ease forwards;
+  animation: slideTop 1s ease forwards;
   animation-delay: 0.2s;
+}
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .home-img img {
   position: absolute;
@@ -272,9 +294,8 @@
   width: 190px;
   pointer-events: none;
   opacity: 1 !important;
-  animation: slideRight 1s ease forwards;
+  animation: slideTop 1s ease forwards;
 }
-
 .home .home-content {
   margin-top: 250px;
   max-width: 320px;
@@ -282,25 +303,51 @@
 .home-content h3 {
   font-size: 2rem;
   justify-content: center;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1s;
 }
 .home-content h1 {
   font-size: 3.2rem;
   justify-content: center;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.3s;
 }
 .home-content p {
   font-size: 1.6rem;
   text-align: start;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.8s;
 }
 .social-media {
   display: flex;
   justify-content: center;
 }
+.social-media a {
+  width: 40px;
+  height: 40px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
 .btn {
   display: inline-block;
   width: 100%;
   text-align: center;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 2.4s;
 }
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*========== END SECCIÓN ACERCA DE MI ===========*/
 
+/*======= SECCIÓN TECNOLOGÍAS QUE DOMINO =======*/
 .techs h2 {
   font-size: 2.4rem;
   margin-top: 8px;
@@ -311,16 +358,34 @@
   gap: 8px;
 }
 .techs img {
-    height: 30px;
-  }
+  height: 30px;
+}
 .techs img:hover {
-    scale: 1;
-  }
+  scale: 1;
+}
+/*==== END SECCIÓN TECNOLOGÍAS QUE DOMINO ====*/
 
-  .laboral {
-    padding-top: 32px;
-  }
-  .title-laboral h2 {
-    font-size: 2.4rem;
-  }
+/*==== SECCIÓN CARRERA LABORAL ====*/
+.laboral {
+  padding-top: 32px;
+}
+.title-laboral h2 {
+  font-size: 2.4rem;
+}
+/*==== END SECCIÓN CARRERA LABORAL ====*/
 
+/*====SECTION CARDS CONTAIN=====*/
+.cards-contain {
+  margin-top: 49px;
+}
+/*=====END SECTION CARDS CONTAIN=====*/
+
+/*====SECTION CONTACT FORM=====*/
+.form {
+  width: 100%;
+  margin-top: 50%;
+}
+.form h2 {
+  display: none;
+}
+/*====END SECTION CONTACT FORM=====*/

@@ -85,6 +85,9 @@ body {
 .navbar a:hover {
   color: var(--color-2);
 }
+.menu{
+  display: none;
+}
 .toggle {
   display: flex;
   margin-top: 1px;
@@ -319,3 +322,8 @@ body {
   .techs div{
     padding: 0;
   }
+  /*====SECTION CARDS CONTAIN=====*/
+.cards-contain{
+  margin-top: 100px;
+}
+/*=====END CARDS CONTAIN=====*/
